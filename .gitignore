@@ -1,0 +1,17 @@
+# ESP-IDF build output and generated config
+firmware/build/
+firmware/sdkconfig
+firmware/sdkconfig.old
+firmware/managed_components/
+
+# Editor settings (the ESP-IDF extension writes machine-specific paths here)
+.vscode/
+
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Local datasets and OS junk
+data/
+.DS_Store
