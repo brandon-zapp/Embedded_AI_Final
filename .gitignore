@@ -13,6 +13,9 @@ firmware/sdkconfig
 firmware/sdkconfig.old
 firmware/managed_components/
 
+# Host unit test build output
+host_test/build/
+
 # Python
 .venv/
 __pycache__/

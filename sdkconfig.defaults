@@ -1,1 +1,11 @@
 CONFIG_IDF_TARGET="esp32s3"
+
+# FireBeetle 2 ESP32-S3 (N16R8): 16 MB flash, 8 MB octal PSRAM
+CONFIG_ESPTOOLPY_FLASHSIZE_16MB=y
+CONFIG_SPIRAM=y
+CONFIG_SPIRAM_MODE_OCT=y
+CONFIG_SPIRAM_SPEED_80M=y
+
+# Larger single app partition for now; switch to a custom partitions.csv
+# once the face models are added
+CONFIG_PARTITION_TABLE_SINGLE_APP_LARGE=y

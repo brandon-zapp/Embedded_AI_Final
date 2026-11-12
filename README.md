@@ -22,3 +22,18 @@ When the board is connected, select its serial port, then use `idf.py flash` and
 - `sim/` — simulation assets
 
 Hardware drivers and model dependencies will be added after confirming the board and display interfaces and pin mapping. See `docs/firmware-setup.md`.
+
+## Hardware-free door-lock demo
+
+While the board is in transit, run the access-control flow on your computer with Python's standard library:
+
+```powershell
+cd prototype
+python doorlock_demo.py authorized
+python doorlock_demo.py unknown
+python doorlock_demo.py low-confidence
+python doorlock_demo.py camera-error
+python -m unittest -v
+```
+
+The demo uses scripted recognition outcomes, not real face recognition; its lock output is printed as simulated text. It demonstrates the policy boundary (enrolled identity plus confidence threshold), fail-secure camera errors, status messages, and timed relocking. These rules can be moved into ESP-IDF firmware and connected to the real camera/display/actuator after the hardware arrives. `prototype/requirements.txt` lists future experimentation packages; the demo does not need them.
