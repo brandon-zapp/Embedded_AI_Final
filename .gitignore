@@ -1,11 +1,17 @@
 # ESP-IDF build output and generated config
+build/
+sdkconfig
+sdkconfig.old
+managed_components/
+
+# Keep local VS Code ESP-IDF paths/settings out of Git
+.vscode/
+
+# Legacy firmware subfolder outputs (if that layout is used later)
 firmware/build/
 firmware/sdkconfig
 firmware/sdkconfig.old
 firmware/managed_components/
-
-# Editor settings (the ESP-IDF extension writes machine-specific paths here)
-.vscode/
 
 # Python
 .venv/
